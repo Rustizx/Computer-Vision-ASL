@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  pydev:
+    container_name: cv_asl_pydev
+    build:
+      context: ./src/python
+    volumes:
+      - ./src/python:/app/src/python
