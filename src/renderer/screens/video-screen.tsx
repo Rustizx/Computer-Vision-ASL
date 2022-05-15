@@ -1,6 +1,7 @@
 /* eslint-disable promise/catch-or-return */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+import axios from 'axios';
 import { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import DumbbellIcon from 'renderer/assets/Dumbbell';
@@ -13,15 +14,15 @@ export default function VideoScreen() {
   const changeEx = (theEx: number) => {
     setEx(theEx);
 
-    // // API Call
-    // const requestOptions = {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ ex: theEx }),
-    // };
-    // fetch('http://localhost:3001/', requestOptions).then((response) =>
-    //   response.json()
-    // );
+    // API Call
+    try {
+      const exJSON = { ex: theEx };
+      axios
+        .post('http://localhost:3001/', exJSON)
+        .then((response: any) => console.log(response.json));
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (

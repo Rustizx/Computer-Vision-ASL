@@ -61,7 +61,7 @@ class FitnessVision:
             img = self.detector.findPose(img, True)
             lmList = self.detector.findPosition(img, True)
 
-            #self.setExercise (BICEP_CURL)
+            self.setExercise(PUSH_UP)
             if len(lmList) != 0:
                 # Right Arm
 
@@ -136,6 +136,7 @@ class FitnessVision:
             frame = buffer.tobytes()
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+            cv2.imshow("Image", img)
 
 
 
