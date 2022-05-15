@@ -1,0 +1,42 @@
+@import "./fonts.scss";
+
+body {
+  position: relative;
+  color: white;
+  height: 100vh;
+  background: rgb(52,43,190);
+  background: linear-gradient(135deg, rgba(52,43,190,1) 0%, rgba(33,185,215,1) 100%);
+  font-family: sans-serif;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-feed {
+  height: 500px;
+  border-radius: 50px;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+.title {
+  font-family: 'NunitoBlack';
+  font-size: 40px;
+  color: white;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+
+  position: absolute;
+  top: 10px;
+  left: 130px;
+}
+
+.sub-title {
+  font-family: 'NunitoBlack';
+  font-size: 20px;
+  color: white;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+
+  position: absolute;
+  top: 31px;
+  left: 440px;
+}
