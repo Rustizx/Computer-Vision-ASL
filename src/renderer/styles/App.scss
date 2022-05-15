@@ -14,8 +14,9 @@ body {
 }
 
 .video-feed {
-  height: 500px;
+  height: 450px;
   border-radius: 50px;
+  margin-top: 100px;
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
 }
 
@@ -27,16 +28,54 @@ body {
 
   position: absolute;
   top: 10px;
-  left: 130px;
+  left: 300px;
 }
 
 .sub-title {
   font-family: 'NunitoBlack';
   font-size: 20px;
   color: white;
-  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
 
   position: absolute;
-  top: 31px;
-  left: 440px;
+  top: 55px;
+  left: 550px;
+}
+
+.icon {
+  position: absolute;
+  top: 23px;
+  left: 600px;
+}
+
+.button-title {
+  font-family: 'NunitoBlack';
+  font-size: 20px;
+  color: white;
+}
+
+.button-box {
+  margin-top: 15px;
+  background: rgba(13, 229, 236, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+
+  transition: all 0.2s ease-in-out;
+}
+
+.selected-button-box {
+  background: rgba(13, 229, 236, 0.8);
+}
+
+.button-box:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  font-family: 'NunitoBlack';
+  font-size: 10px;
+  color: white;
 }

@@ -39,10 +39,16 @@ class FitnessVision:
     def setExercise(self, exercise):
         if exercise == PUSH_UP:
             self.pushUp = True
+            self.bicepCurl = False
+            self.squat = False
         elif exercise == BICEP_CURL:
             self.bicepCurl = True
+            self.pushUp = False
+            self.squat = False
         else:
             self.squat = True
+            self.bicepCurl = False
+            self.pushUp = False
 
     def still(self, camera):
         while True:
@@ -55,7 +61,7 @@ class FitnessVision:
             img = self.detector.findPose(img, True)
             lmList = self.detector.findPosition(img, True)
 
-            self.setExercise (SQUAT)
+            #self.setExercise (BICEP_CURL)
             if len(lmList) != 0:
                 # Right Arm
 

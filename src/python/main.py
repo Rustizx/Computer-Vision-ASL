@@ -18,7 +18,7 @@ def video_feed():
 @app.route('/')
 def index():
     if request.method == "POST":
-        exercise = request.method['name of HTML form ele1ment'] # exercise will be an int value so element val will need to be 0,1,2
+        exercise = request.json['ex'] # exercise will be an int value so element val will need to be 0,1,2
         fitnessVision.setExercise(exercise)
 
 
